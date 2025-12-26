@@ -6,7 +6,6 @@ st.title("📚 Veille – Violences sexuelles et sexistes dans la culture")
 
 # Lien CSV public de ton Google Sheets
 CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1v…/pub?output=csv"
-"
 
 # Charger les données
 df = pd.read_csv(CSV_URL)
