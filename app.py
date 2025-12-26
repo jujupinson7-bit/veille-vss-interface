@@ -8,8 +8,8 @@ st.title("📚 Veille – Violences sexuelles et sexistes dans la culture")
 CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1v…/pub?output=csv"
 
 # Charger les données
-df = pd.read_csv(CSV_URL)
-
+df = pd.read_csv(CSV_URL, encoding='utf-8')
+df = df.applymap(lambda x: x.encode('utf-8', errors='ignore').decode('utf-8') if isinstance(x, str) else x)
 # Convertir la date
 df["Date"] = pd.to_datetime(df["Date"], errors='coerce')
 df = df.sort_values(by="Date", ascending=False)
