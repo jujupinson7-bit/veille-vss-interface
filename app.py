@@ -5,7 +5,8 @@ st.set_page_config(page_title="Veille VSS Culture", layout="wide")
 st.title("📚 Veille – Violences sexuelles et sexistes dans la culture")
 
 # Lien CSV public de ton Google Sheets
-CSV_URL = "COLLE_ICI_TON_URL_CSV"
+CSV_URL = "CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1v…/pub?output=csv"
+"
 
 # Charger les données
 df = pd.read_csv(CSV_URL)
